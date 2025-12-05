@@ -1,0 +1,46 @@
+MODEL INFORMATION
+=================
+
+Base Model: Llama-3. 1-8b-instant
+Access Method: Groq API
+Model Provider: Groq (https://groq.com)
+
+MODEL SPECIFICATIONS:
+- Model Name: llama-3.1-8b-instant
+- Architecture: Llama 3.1
+- Parameters: 8 Billion
+- Context Length: 8,192 tokens
+- Provider: Meta AI (via Groq)
+- API Endpoint: https://api.groq.com/openai/v1/chat/completions
+
+USAGE IN THIS PROJECT:
+- Temperature: 0.0 (for original question answering - deterministic)
+- Temperature: 0.9 (for perturbation generation - diverse outputs)
+- Max Tokens: 500 (question answering), 1000 (perturbation generation)
+- System Prompt: Medical expert multiple choice exam
+
+REPRODUCING RESULTS:
+1. Obtain Groq API key from: https://console.groq.com
+2. Replace API key in Cell 2 of the notebook
+3. Run all cells sequentially
+4. The same model and parameters will be used automatically
+
+MODEL ACCESS:
+Since this is an API-based model (not a saved file), you need:
+- Groq API account (free tier available)
+- API key for authentication
+- Internet connection to access the model
+
+NOTE: Results may vary slightly due to API updates, but overall 
+performance should remain consistent. 
+
+INNOVATION:
+This project extended the base MedFuzz framework with:
+- 3 novel perturbation types
+- Advanced robustness testing
+- Statistical analysis across perturbation strategies
+
+BASE PAPER:
+MedFuzz: Exploring the Robustness of Large Language Models 
+in Medical Question Answering
+arXiv:2406.06573 (2024)
